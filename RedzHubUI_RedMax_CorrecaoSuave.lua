@@ -1068,7 +1068,7 @@ local Connections, Connection = {}, redzlib.Connection do
 end
 
 local GetFlag, SetFlag, CheckFlag do
-	CheckFlag = function(Name)
+	CheckFlag = function("Name")
 		return type(Name) == "string" and Flags[Name] ~= nil
 	end
 	
@@ -1484,7 +1484,7 @@ function redzlib:MakeWindow(Configs)
 			BackgroundTransparency = 1,
 			TextXAlignment = "Left",
 			TextYAlignment = "Bottom",
-			TextSize = 8,
+			TextSize = 10,
 			Font = Enum.Font.Gotham,
 			Name = "SubTitle"
 		}), "DarkText")
@@ -2690,12 +2690,12 @@ function redzlib:MakeWindow(Configs)
 				
 				ClickDelay = true
 				SetProps(JoinButton, {
-					Text = "Copiado para a área de transferência",
+					Text = "Copied to clipboard",
 					BackgroundColor3 = Color3.fromRGB(100, 100, 100),
 					TextColor3 = Color3.fromRGB(150, 150, 150)
 				})task.wait(5)
 				SetProps(JoinButton, {
-					Text = "Entrar",
+					Text = "Join",
 					BackgroundColor3 = Color3.fromRGB(50, 150, 50),
 					TextColor3 = Color3.fromRGB(220, 220, 220)
 				})ClickDelay = false
